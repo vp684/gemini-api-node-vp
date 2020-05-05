@@ -6,7 +6,9 @@ with some added functionality.
 Gemini cryptocurrency exchange API wrapper for Node.js
 
 ## Installation
-
+```
+npm install gemini-api-vp
+```
 
 
 ## Usage
