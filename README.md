@@ -7,9 +7,7 @@ Gemini cryptocurrency exchange API wrapper for Node.js
 
 ## Installation
 
-```
-yarn add gemini-api
-```
+
 
 ## Usage
 
