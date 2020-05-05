@@ -1,3 +1,6 @@
+This is a fork of mjesuele/gemini-api-node
+with have some added functionality.
+
 # gemini-api
 
 Gemini cryptocurrency exchange API wrapper for Node.js
