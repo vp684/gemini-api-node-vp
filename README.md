@@ -1,5 +1,5 @@
 This is a fork of mjesuele/gemini-api-node
-with have some added functionality.
+with some added functionality.
 
 # gemini-api
 
