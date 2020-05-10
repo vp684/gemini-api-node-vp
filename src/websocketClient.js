@@ -53,7 +53,7 @@ export default class GeminiAPIWebsocketClient {
     && this.orderSocket.addEventListener(`message`, withData(listener));
 
   removeMarketMessageListener = listener => this.marketSocket
-    && this.marketSocket.removeEventListener(`message`, withData(listener));
+    && this.marketSocket.removeEventListener(`message`, listener);
 
   removeOrderMessageListener = listener => this.orderSocket
     && this.orderSocket.removeEventListener(`message`, withData(listener));
