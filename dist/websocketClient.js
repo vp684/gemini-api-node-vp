@@ -46,7 +46,8 @@ class GeminiAPIWebsocketClient {
     };
 
     this.openMarketSocket = (symbol, onOpen) => {
-      this.marketSocket = new _ws2.default(`${this.baseUrl}/v1/marketdata/${symbol}`);
+      let opts = '?heartbeat=true';
+      this.marketSocket = new _ws2.default(`${this.baseUrl}/v1/marketdata/${symbol}${opts}`);
       this.marketSocket.addEventListener(`open`, (...args) => {
         console.log(`Connected to market data WebSocket API`);
         if (typeof onOpen === `function`) onOpen(...args);
@@ -57,7 +58,7 @@ class GeminiAPIWebsocketClient {
 
     this.addOrderMessageListener = listener => this.orderSocket && this.orderSocket.addEventListener(`message`, withData(listener));
 
-    this.removeMarketMessageListener = listener => this.marketSocket && this.marketSocket.removeEventListener(`message`, withData(listener));
+    this.removeMarketMessageListener = listener => this.marketSocket && this.marketSocket.removeEventListener(`message`, listener);
 
     this.removeOrderMessageListener = listener => this.orderSocket && this.orderSocket.removeEventListener(`message`, withData(listener));
 
