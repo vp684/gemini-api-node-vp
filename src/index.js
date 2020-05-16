@@ -99,6 +99,9 @@ export default class GeminiAPI {
   getMyAvailableBalances = () =>
     this.requestPrivate(`/balances`)
 
+  getMyTransfers = (params = {}) => 
+    this.requestPrivate(`/transfers`, params)  
+
   newAddress = (currency) =>
     this.requestPrivate(`/deposit/${currency}/newAddress`)
 }
